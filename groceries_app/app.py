@@ -82,7 +82,7 @@ class GroceryProgram:
                                     pady=10)
 
         ## Commands
-        self.command_text = tk.Label(frame, text='Ctrl+Enter: Velg på nytt\nCtrl+Backspace: Lås valg')
+        self.command_text = tk.Label(frame, text='Ctrl+Enter: Reroll recipe suggestion.\nCtrl+Backspace: Lock suggestion.')
         self.command_text.grid(rowspan=1, columnspan=1, row=3, column=1, sticky=tk.N + tk.S + tk.E + tk.W, padx=10,
                                pady=10)
 
@@ -237,14 +237,14 @@ class GroceryProgram:
 
                 self.current_menu.process_input()
 
-            self.menu_box.insert(tk.INSERT, self.current_menu.processed_plan)
+            self.menu_box.insert(tk.INSERT, '\n'+self.current_menu.processed_plan)
 
     def callback_view_menu(self):
         """Callback for the send menu as email_sender button."""
         print('callback_send_menu_email')
         if isinstance(self.current_menu, Menu):
             self.menu_box.delete(1.0, tk.END)
-            self.menu_box.insert(tk.INSERT, self.current_menu.generate_menu_str())
+            self.menu_box.insert(tk.INSERT, '\n'+self.current_menu.generate_menu_str())
         else:
             print('No menu to view')
 
