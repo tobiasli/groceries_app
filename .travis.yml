@@ -1,0 +1,25 @@
+language: python
+dist: xenial
+sudo: false
+python:
+- '3.6'
+- '3.7'
+before_install:
+- export PYTHONPATH=$PYTHONPATH:$(pwd)
+install:
+- python setup.py install
+- pip install python-coveralls
+- pip install pytest
+- pip install pytest-cov
+script:
+- pytest --cov=groceries_app groceries_app
+after_success:
+- coveralls
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: AKqfjInAbrgLbilnYrJiC0UIPij3jpShGYyP6/+3l/PImKP1sWEU7zOdMCtMpNBRYgehprSwr/yuSqsv/f3Kbetjog/FzbgfRiovdYa/GqPC4dTpJrXFEcaKu/A7ErD8G3M3CpzNMB4SbSEI9PmoY17Xos+MW223W5gImtSlmJd/F4HiJJ5YxIW20J4AwbURGAs0GXeGN2JZgFOFEnK/puzBS2r7gJSSrWwGCFdoTdcrvDhi+9+cpkg1p3Tkm9DqHKZHhyVSeg/yNGIlGapQZjCF64bdxubhGt8lxPLJgHXeRMr1xyyCYfsxsKDzrnnoOM+GQcn+oGociS1Ke+eQygU5PDEcDR1BuITuVDf29STOxl3+/MOQWg14cVwq5XA9t6+nSVaSJ4WZAXnjd6XEJVutaU7PS0LawzikRvhu1gq8HqReQoRrImOZkls2gWsvnslZaJSNg2p0QNPks9FTgkz71TYygmAN4qSO/RCDssgq9E6p3Vg92HT1MRZfkMxeHt334YZ0vLbvY+i4JR9RHFZD5gV5GE4TQpCJmmPyCALzSHtjXUge1jtw1CJSn+EkIV2a0Z4IxaHgz6ALfieGl1npp5dCSzQWekzids4sxyb75bar6PXUVkzhnHGMUnrEuJsUXLsrBhEheQrHXZPa6p/BtGp3QhLpojF98Pn2kGk=
+  on:
+    branch: master
+  skip_existing: true
