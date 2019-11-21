@@ -1,4 +1,4 @@
-﻿# GroceryProgram
+﻿# groceries_app
 Create weekly menu plans and shopping lists in 10 seconds.
 
 An app utilizing the [groceries](github.com/tobiasli/groceries) module
