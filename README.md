@@ -1,14 +1,18 @@
 ﻿# GroceryProgram
-A program utilizing the GroceryShopping module to handle weekly dinner menus and grocery lists.
+Create weekly menu plans and shopping lists in 10 seconds.
 
-Simple tkinter GUI.
+An app utilizing the [groceries](github.com/tobiasli/groceries) module
+to create menu suggestions and compile shopping lists.
 
-Dependancies:
-* wunderpy2 (with some slight modification to work with Python3.
-* pyyaml
-* numpy
+## Install
+```
+pip install groceries_app-tobiasli
+```
 
-To clone:
-´´´
->>> git clone https://github.com/tobiasli/GroceryProgram.git
-´´´
+## Usage
+```python
+import groceries_app.start_app
+```
+
+For further usage information, run the app, and check [groceries](github.com/tobiasli/groceries)
+for information on how the parser works.
