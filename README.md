@@ -1,6 +1,7 @@
-﻿# groceries_app
+# groceries_app
 [![Build Status](https://travis-ci.org/tobiasli/groceries_app.svg?branch=master)](https://travis-ci.org/tobiasli/groceries_app)<br/>
 [![Coverage Status](https://coveralls.io/repos/github/tobiasli/groceries_app/badge.svg?branch=master)](https://coveralls.io/github/tobiasli/groceries_app?branch=master)<br/>
+[![PyPI version](https://badge.fury.io/py/groceries_app-tobiasli.svg)](https://badge.fury.io/py/groceries_app-tobiasli)<br/>
 
 Create weekly menu plans and shopping lists in 10 seconds.
 
