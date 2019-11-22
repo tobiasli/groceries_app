@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(name='groceries_app-tobiasli',
-                 version='1.0.1',
+                 version='1.0.2',
                  description='App for compiling shopping lists.',
                  author='Tobias Litherland',
                  author_email='tobiaslland@gmail.com',

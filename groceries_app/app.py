@@ -237,7 +237,7 @@ class GroceryProgram:
 
                 self.current_menu.process_input()
 
-            self.menu_box.insert(tk.INSERT, '\n'+self.current_menu.processed_plan)
+            self.menu_box.insert(tk.INSERT, self.current_menu.processed_plan)
 
     def callback_view_menu(self):
         """Callback for the send menu as email_sender button."""
